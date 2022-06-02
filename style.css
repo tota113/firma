@@ -45,6 +45,7 @@ display: flex;
 align-items: center;
 list-style: none;
 text-align: center;
+
 }
 
 .navbar_item{
@@ -81,6 +82,109 @@ border-radius: 4px;
 background: white;
 color: black;   
 }
+
+.button:hover{
+    background:black;
+    color:blue;
+    transition: all 0.3s ease;
+}
+
+@media screen (max-width:960px){
+    .navbar_container{
+display:flex;
+justify-content:space-between;
+height: 80px;
+width: 100%;
+z-index: 1;
+max-width: 1300px;
+padding: 0;
+
+    }
+#navbar_logo{
+    padding-left: 25px;
+}
+.navbar_menu{
+    display:grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -1000px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    height: 50vh;
+    z-index: -1;
+}
+.navbar_menu.active{
+     background-color: green;
+     top:100%;
+     opacity: 1;
+     transition: all 0.5s ease;
+     height: 50vh;
+     z-index: -1;
+}
+.navbar_toggle .bar{
+     width: 25px;
+     height: 3px;
+     margin: 5px auto;
+     transition: all 0.3s ease-in-out;
+     background: white;
+}
+
+.navbar_item{
+    width: 100%;
+}
+
+.navbar_links{
+     text-align: center;
+     padding: 2rem;
+     width: 100%;
+     display: table;
+}
+
+.button{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 80%;
+     height: 80px;
+     margin: 0;
+}
+.navbar_toggle .bar{
+     display: block;
+     cursor: pointer;
+}
+#mobile-menu{
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+}
+
+#mobile-menu.is-active .bar:nth-child(2){
+    opacity: 0;
+}
+
+#mobile-menu.is-active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+
+#mobile-menu.is-active .bar:nth-child(3){
+    transform: translate(-8px) rotate(-45deg);
+}
+
+
+}
+
+      .navbar_links:hover{
+        color:pink;
+        transition: all 0.3s ease;
+
+      }
+
+
+      /*HERO MENU*/
+
 
 
 .main{
@@ -125,7 +229,7 @@ color: blueviolet;
 .main_btn{
     font-size: 1rem;
     padding: 14px 32px;
-    background-color: orange;
+    background-color: rgb(10, 208, 243);
     border: none;
     border-radius: 4px;
     margin-top: 2rem;
